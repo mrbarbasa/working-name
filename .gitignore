@@ -28,7 +28,6 @@ build/Release
 node_modules/
 bower_components/
 platforms/
-plugins/
 
 # Users Environment Variables
 .lock-wscript
