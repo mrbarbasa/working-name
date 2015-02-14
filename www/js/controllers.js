@@ -65,7 +65,7 @@ angular.module('ionicApp.controllers', [])
   // };
 
   $scope.disableSwipe = function() {
-    // $ionicSlideBoxDelegate.enableSlide(false);
+    $ionicSlideBoxDelegate.enableSlide(false);
   };
 
   $scope.startOver = function () {
@@ -74,34 +74,34 @@ angular.module('ionicApp.controllers', [])
 
   // Called each time the slide changes
   $scope.slideHasChanged = function(index) { // The index that it changed to
-    console.log('SLIDE changed');
-    console.log('SLIDE index = ' + index);
-    $scope.data.slideIndex = index;
+    // console.log('SLIDE changed');
+    // console.log('SLIDE index = ' + index);
+    // $scope.data.slideIndex = index;
   };
 
-  // // User makes the choice on the LEFT of the screen
-  // $scope.onSwipeLeft = function() { // wear
-  //   var currentIndex = $ionicSlideBoxDelegate.currentIndex();
-  //   // console.log('LEFT choice');
-  //   // console.log('LEFT index = ' + currentIndex);
-  //   if (currentIndex === 0) {
-  //     $ionicSlideBoxDelegate.slide(1);
-  //   }
-  // };
-
-  // User makes the choice on the RIGHT of the screen
-  $scope.advanceSlide = function() {
+  // When user swipes left, user makes the choice on the RIGHT of the screen
+  $scope.onSwipeLeft = function() { // wear
     var currentIndex = $ionicSlideBoxDelegate.currentIndex();
     // console.log('RIGHT choice');
     // console.log('RIGHT index = ' + currentIndex);
     if (currentIndex === 0) {
       $ionicSlideBoxDelegate.slide(1);
-    } 
-     if (currentIndex === 1) { // User chose Business
+    }
+  };
+
+  // advanceSlide
+  // When user swipes right, user makes the choice on the LEFT of the screen
+  $scope.onSwipeRight = function() {
+    var currentIndex = $ionicSlideBoxDelegate.currentIndex();
+    // console.log('LEFT choice');
+    // console.log('LEFT index = ' + currentIndex);
+    if (currentIndex === 1) { // User chose Business
       $ionicSlideBoxDelegate.slide(2);
-    } else if (currentIndex === 2) { // User chose Black
+    }
+    else if (currentIndex === 2) { // User chose Black
       $ionicSlideBoxDelegate.slide(3);
-    } else if (currentIndex === 3) { // User chose Long
+    }
+    else if (currentIndex === 3) { // User chose Long
       $ionicSlideBoxDelegate.slide(4);
     }
   };

@@ -38,18 +38,18 @@
     </script>
 
     <script id="wear-lengthSlide.html" type="text/ng-template">
-      <div ng-include="'./templates/wear-lengthSlide.html'"></div>      
+      <div ng-include="'./templates/wear-lengthSlide.html'"></div>
     </script>
 
     <script id="wear-decisionSlide.html" type="text/ng-template">
-      <div ng-include="'./templates/wear-decisionSlide.html'"></div>   
+      <div ng-include="'./templates/wear-decisionSlide.html'"></div>
     </script>
 
     <script id="intro.html" type="text/ng-template">
       <ion-view title="Dynamic Slides">
         <ion-slide-box ng-init="disableSwipe()">
 
-          <ion-slide ng-repeat="slide in data.slides" on-swipe-left="advanceSlide()" on-swipe-right="advanceSlide()">
+          <ion-slide ng-repeat="slide in data.slides" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
             <div ng-include src="slide.template"></div>
           </ion-slide>
 
