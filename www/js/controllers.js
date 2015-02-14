@@ -1,6 +1,8 @@
 angular.module('ionicApp.controllers', [])
 
-.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate, DataRetrieval) {
+
+  $scope.data = DataRetrieval;
 
   $scope.slides = [
     {

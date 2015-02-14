@@ -19,6 +19,7 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
   </head>
 
   <body ng-app="ionicApp" animation="slide-left-right-ios7">
@@ -41,7 +42,7 @@
             <div ng-include src="slides[1].template"></div>
           </ion-slide>
 
-          <ion-slide on-swipe-left="clothing_type='casual'" on-swipe-right="clothing_type='business'">
+          <ion-slide on-swipe-left="data.userChoice.type='Casual'" on-swipe-right="data.userChoice.type='Business'">
             <div ng-include src="slides[0].template"></div>
           </ion-slide>
 
