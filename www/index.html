@@ -25,56 +25,24 @@
 
     <ion-nav-view></ion-nav-view>
 
-    <script  id="firstSlide.html" type="text/ng-template">
-      <div ng-include="'./templates/firstSlide.html'"></div>
+    <script  id="homeSlide.html" type="text/ng-template">
+      <div ng-include="'./templates/homeSlide.html'"></div>
     </script>
 
-    <script id="firstSlide.html" type="text/ng-template">
-      <h1>What should I ... ?</h1>
-
-      <h4>LEFT: eat</h4>
-      <h4>RIGHT: wear</h4>
-
-      <button class="button button-assertive" ng-click="showBonus()" ng-if="data.initialInstruction">Show Bonus Slide</button>
-      <p class="padding" ng-if="data.initialInstruction">Notice at first there are only 3 slides</p>
-      <p class="padding" ng-if="data.secondInstruction">Now there are 4 slides</p>
+    <script id="wear-occasionSlide.html" type="text/ng-template">
+      <div ng-include="'./templates/wear-occasionSlide.html'"></div>
     </script>
 
-    <script id="secondSlide.html" type="text/ng-template">
-      <h1>What should I wear?</h1>
-
-      <h4>LEFT: Business</h4>
-      <h4>RIGHT: Hot Date</h4>
+    <script id="wear-colorSlide.html" type="text/ng-template">
+      <div ng-include="'./templates/wear-colorSlide.html'"></div>
     </script>
 
-    <script id="bonusSlide.html" type="text/ng-template">
-      <h1>Bonus Slide!</h1>
+    <script id="wear-lengthSlide.html" type="text/ng-template">
+      <div ng-include="'./templates/wear-lengthSlide.html'"></div>      
     </script>
 
-    <script id="thirdSlide.html" type="text/ng-template">
-      <h1>What should I wear?</h1>
-      <h3>Business</h3>
-      <br>
-
-      <h4>LEFT: Black</h4>
-      <h4>RIGHT: Blue</h4>
-    </script>
-
-    <script id="fourthSlide.html" type="text/ng-template">
-      <h1>What should I wear?</h1>
-      <h3>Business</h3>
-      <h3>Black</h3>
-      <br>
-
-      <h4>LEFT: Long</h4>
-      <h4>RIGHT: No Length</h4>
-    </script>
-
-    <script id="fifthSlide.html" type="text/ng-template">
-      <h1>You should wear: Slacks</h1>
-      <h3>Business</h3>
-      <h3>Black</h3>
-      <h3>Long</h3>
+    <script id="wear-decisionSlide.html" type="text/ng-template">
+      <div ng-include="'./templates/wear-decisionSlide.html'"></div>   
     </script>
 
     <script id="intro.html" type="text/ng-template">
@@ -89,14 +57,6 @@
       </ion-view>
     </script>
 
-    <script id="main.html" type="text/ng-template">
-      <ion-view hide-back-button="true" title="Awesome">
-        <ion-content padding="true">
-          <h1>Main app here</h1>
-          <button class="button" ng-click="toIntro()">Do Tutorial Again</button>
-        </ion-content>
-      </ion-view>
-    </script>
 
   </body>
 </html>

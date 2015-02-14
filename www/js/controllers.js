@@ -9,27 +9,23 @@ angular.module('ionicApp.controllers', [])
     secondInstruction : false,
     slides : [
       {
-        'template' : 'firstSlide.html',
+        'template' : 'homeSlide.html',
         'viewable' : true
       },
       {
-        'template' : 'bonusSlide.html',
-        'viewable' : false
-      },
-      {
-        'template' : 'secondSlide.html',
+        'template' : 'wear-occasionSlide.html',
         'viewable' : true
       },
       {
-        'template' : 'thirdSlide.html',
+        'template' : 'wear-colorSlide.html',
         'viewable' : true
       },
       {
-        'template' : 'fourthSlide.html',
+        'template' : 'wear-lengthSlide.html',
         'viewable' : true
       },
       {
-        'template' : 'fifthSlide.html',
+        'template' : 'wear-decisionSlide.html',
         'viewable' : true
       }
     ]
@@ -69,21 +65,21 @@ angular.module('ionicApp.controllers', [])
   };
 
   $scope.disableSwipe = function() {
-    $ionicSlideBoxDelegate.enableSlide(false);
+    // $ionicSlideBoxDelegate.enableSlide(false);
   };
 
   // Called each time the slide changes
   $scope.slideHasChanged = function(index) { // The index that it changed to
-    // console.log('SLIDE changed');
-    // console.log('SLIDE index = ' + index);
-    // $scope.data.slideIndex = index;
+    console.log('SLIDE changed');
+    console.log('SLIDE index = ' + index);
+    $scope.data.slideIndex = index;
   };
 
   // User makes the choice on the RIGHT of the screen
   $scope.onSwipeLeft = function() { // wear
     var currentIndex = $ionicSlideBoxDelegate.currentIndex();
-    // console.log('RIGHT choice');
-    // console.log('RIGHT index = ' + currentIndex);
+    console.log('RIGHT choice');
+    console.log('RIGHT index = ' + currentIndex);
     if (currentIndex === 0) {
       $ionicSlideBoxDelegate.slide(1);
     }
@@ -92,8 +88,8 @@ angular.module('ionicApp.controllers', [])
   // User makes the choice on the LEFT of the screen
   $scope.onSwipeRight = function() {
     var currentIndex = $ionicSlideBoxDelegate.currentIndex();
-    // console.log('LEFT choice');
-    // console.log('LEFT index = ' + currentIndex);
+    console.log('LEFT choice');
+    console.log('LEFT index = ' + currentIndex);
     if (currentIndex === 1) { // User chose Business
       $ionicSlideBoxDelegate.slide(2);
     }
