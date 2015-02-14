@@ -21,20 +21,61 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// Font
+@import "http://fonts.googleapis.com/css?family=Oswald:400,700.css";
+
+$oswald: 'Oswald', sans-serif;
+
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
 }
 .slider {
   height: 100%;
+  .slider-slides {
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    .title {
+      margin: 0;
+      font-family: $oswald;
+    }
+    .left-choice {
+      position: absolute;
+      font-family: $oswald;
+      font-size: 2em;
+      background-image: url('../img/business-male.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 80%;
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      padding: 100px 0px 0px 100px;
+    }
+    .right-choice {
+      position: absolute;
+      font-family: $oswald;
+      font-size: 2em;
+      background-image: url('../img/casual-male.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 20%;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      padding: 100px 100px 0px 0px;
+    }
+    .start-over {
+      background-color: green;
+      margin: 0;
+    }
+  }
 }
-.slider-slide {
-  padding-top: 80px;
-  color: #000;
-  background-color: #fff;
-  text-align: center;
 
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
+
+.slider-pager {
+  display: none;
 }
 
 #logo {

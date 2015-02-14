@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700.css);
 /*
 To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
@@ -7020,14 +7021,44 @@ body {
 
 .slider {
   height: 100%; }
+  .slider .slider-slides {
+    color: #000;
+    background-color: #fff;
+    text-align: center; }
+    .slider .slider-slides .title {
+      margin: 0;
+      font-family: 'Oswald', sans-serif; }
+    .slider .slider-slides .left-choice {
+      position: absolute;
+      font-family: 'Oswald', sans-serif;
+      font-size: 2em;
+      background-image: url('../img/business-male.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 80%;
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      padding: 100px 0px 0px 100px; }
+    .slider .slider-slides .right-choice {
+      position: absolute;
+      font-family: 'Oswald', sans-serif;
+      font-size: 2em;
+      background-image: url('../img/casual-male.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 20%;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      padding: 100px 100px 0px 0px; }
+    .slider .slider-slides .start-over {
+      background-color: green;
+      margin: 0; }
 
-.slider-slide {
-  padding-top: 80px;
-  color: #000;
-  background-color: #fff;
-  text-align: center;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300; }
+.slider-pager {
+  display: none; }
 
 #logo {
   margin: 30px 0px; }
