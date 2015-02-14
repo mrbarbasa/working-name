@@ -1,128 +1,197 @@
-var foodopt = [{
-  id : 0,
-  cuisine : 'Mexican',
-  location : 'Kakaako',
-  name : 'Cocina',
-  cost : '$$'
-}, {
-  id : 1,
-  cuisine : 'Japanese',
-  location : 'Ward',
-  name : 'Nanzan GiroGiro',
-  cost : '$$$'
-}, {
-  id : 2, 
-  cuisine : 'Dimsum',
-  location : 'Chinatown',
-  name : 'Mei Sum',
-  cost : '$'
-}, {
-  id : 3,
-  cuisine : 'Korean',
-  location : 'Kalihi',
-  name : 'HanYang',
-  cost : '$'
-}, {
-  id : 4,
-  cuisine : 'Thai',
-  location : 'Liliha',
-  name : 'Thai Cafe',
-  cost : '$'
-}, {
-  id : 5,
-  cuisine : 'Burgers', 
-  location : 'Kakaako',
-  name : 'Kua"aina burger',
-  cost : '$$'
-}];
+// var foodopt = [{
+//   cuisine : 'Mexican',
+//   location : 'Kakaako',
+//   name : 'Cocina',
+//   cost : '$$'
+// }, {
+//   cuisine : 'Japanese',
+//   location : 'Ward',
+//   name : 'Nanzan GiroGiro',
+//   cost : '$$$'
+// }, {
+//    cuisine : 'Dimsum',
+//   location : 'Chinatown',
+//   name : 'Mei Sum',
+//   cost : '$'
+// }, {
+//   cuisine : 'Korean',
+//   location : 'Kalihi',
+//   name : 'HanYang',
+//   cost : '$'
+// }, {
+//   cuisine : 'Thai',
+//   location : 'Liliha',
+//   name : 'Thai Cafe',
+//   cost : '$'
+// }, {
+//   cuisine : 'Burgers', 
+//   location : 'Kakaako',
+//   name : 'Kua"aina burger',
+//   cost : '$$'
+// }];
 
+var colors = ['black', 'gray', 'white'];
 
-
-
+var casual; 
+var torso;
+var feet;
+var legs;
+var neck;
 var clothopt = [{
-  id : 13,
   type : 'Casual',
+  color : 'White',
+  length : 'Short',
+  item : 'Node.js Shirt',
+  loc: torso
+},{
+  // 0
+   type : 'Casual',
   color : ' Beige',
   length : 'Short',
-  item : 'Cargo Shorts'
+  item : 'Cargo Shorts',
+  loc : legs
 }, {
-  id : 0,
+  // 1
   type : 'Casual',
   color : 'Black',
   length : 'Long',
-  item : 'Tank-top'  
+  item : 'Ironic T-shirt',
+  loc : 'torso'  
 }, {
-  id : 1,
+  // 2
   type : 'Casual',
   color: 'Grey',
   length: 'Long',
-  item : 'Sweatpants'
+  item : 'Sweatpants',
+  loc : 'legs'
 }, {
-  id : 2,
+  // 3
   type : 'Casual',
   color : 'White',
   length : null,
-  item : 'Sneakers'
+  item : 'Sneakers',
+  loc : 'feet'
 }, {
-  id : 3,
+  // 4
   type : 'Casual',
   color : 'Black',
   length : 'Short',
-  item : 'Pants'
+  item : 'Jeans',
+  loc : 'legs'
 }, {
-  id : 4,
+  // 5
   type : 'Casual',
   color : 'Black',
   length : null,
-  item : 'Slippers'
+  item : 'Slippers',
+  loc : 'feet'
 }, {
-  id : 5, 
-  type : 'Business', 
+  type : 'Business',
+  color : 'Grey',
+  length : 'Long',
+  item : 'Slacks',
+  loc : 'legs'
+},{
+  // 6
+   type : 'Business', 
   color : 'Blue',
   length : 'Long',
-  item : 'Dress-Shirt'
+  item : 'Dress-Shirt',
+  loc : 'torso'
 }, {
-  id : 6,
+  // 7
   type : 'Business',
   color: 'Black',
   length : 'Long',
-  item : 'Slacks'
+  item : 'Slacks',
+  loc : 'legs'
 }, {
-  id :12,
+  // 8
   type : 'Business',
   color : 'Black',
   length : null,
-  item : null,
-  accessory : 'Fancy NeckTie'
+  item : 'Tie',
+  accessory : 'Fancy NeckTie',
+  loc : 'neck'
 },{
-  id : 7,
+  type : 'Business',
+  color : 'Brown',
+  length : null,
+  item : 'Dress-Shoes',
+  loc : 'feet'
+},{
+  // 9
   type : 'Business',
   color: 'Black',
   length : null,
-  item : 'Dress-Shoes' 
+  item : 'Dress-Shoes',
+  loc : 'feet' 
 }, {
-  id : 8,
+  // 10
   type : 'Hot Date',
   color: 'Pink',
   length : 'Long',
-  item : 'Dress-Shirt'
+  item : 'Dress-Shirt',
+  loc : 'torso'
 }, {
-  id : 9, 
-  type : 'Hot Date',
+  // 11
+   type : 'Hot Date',
   color : 'Black',
   length : 'Long',
-  item : 'Slacks'
+  item : 'Slacks',
+  loc : 'legs'
 }, { 
+  // 12
   id :10,
   type : 'Hot Date',
   color : 'Black',
   length : null,
-  item : 'Dress-Shoes'
+  item : 'Dress-Shoes',
+  loc : 'feet'
 }, {
+  // 13
   id: 11,
   type : 'Hot Date',
   color : 'White',
   length : null,
-  item : null,
-  accessory : 'Fancy NeckTie'
+  item : 'Tie',
+  accessory : 'Fancy NeckTie',
+  loc : 'neck'
 }];
+
+
+// Narrows down the selection
+var userChoice = {
+  type : null,
+  length : null,
+  acessory : null
+};
+
+// Filter through everything to return casual
+
+
+// Filter through Casual to return Short items.
+
+function choose(userChoice){
+  function getAnswer(e){
+    if (userChoice.type == e.type && userChoice.length == e.length){
+      return e;
+    }else{
+      return false;
+    }
+  }
+  clotopt.filter(getAnswer);
+}
+
+
+
+
+// check if userChoice type = (selection)
+// array method filter on clothopt
+// return all the matching items from filter
+// var casualCloth = 'Casual'
+// if (userChoice.type == casualCloth){
+//   if (userChoice.length == 'Long'){
+
+//   }
+// }
