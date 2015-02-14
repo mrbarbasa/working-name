@@ -24,13 +24,8 @@
   <body ng-app="ionicApp" animation="slide-left-right-ios7">
 
     <ion-nav-view></ion-nav-view>
-
-    <script id="firstSlide.html" type="text/ng-template">
-      <h1>First Slide!</h1>
-      <button class="button button-assertive" ng-click="showBonus()" ng-if="data.initialInstruction">Show Bonus Slide</button>
-
-      <p class="padding" ng-if="data.initialInstruction">Notice at first there are only 3 slides</p>
-      <p class="padding" ng-if="data.secondInstruction">Now there are 4 slides</p>
+    <script  id="firstSlide.html" type="text/ng-template">
+      <div ng-include="'./templates/firstSlide.html'"></div>
     </script>
 
     <script id="secondSlide.html" type="text/ng-template">
@@ -44,6 +39,7 @@
     <script id="thirdSlide.html" type="text/ng-template">
       <h1>Third Slide!</h1>
     </script>
+
     <script id="intro.html" type="text/ng-template">
       <ion-view title="Dynamic Slides">
         <ion-slide-box on-slide-changed="slideChanged(index)">
