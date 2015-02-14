@@ -1,35 +1,29 @@
 var foodopt = [{
-  id : 0,
   cuisine : 'Mexican',
   location : 'Kakaako',
   name : 'Cocina',
   cost : '$$'
 }, {
-  id : 1,
   cuisine : 'Japanese',
   location : 'Ward',
   name : 'Nanzan GiroGiro',
   cost : '$$$'
 }, {
-  id : 2, 
-  cuisine : 'Dimsum',
+   cuisine : 'Dimsum',
   location : 'Chinatown',
   name : 'Mei Sum',
   cost : '$'
 }, {
-  id : 3,
   cuisine : 'Korean',
   location : 'Kalihi',
   name : 'HanYang',
   cost : '$'
 }, {
-  id : 4,
   cuisine : 'Thai',
   location : 'Liliha',
   name : 'Thai Cafe',
   cost : '$'
 }, {
-  id : 5,
   cuisine : 'Burgers', 
   location : 'Kakaako',
   name : 'Kua"aina burger',
@@ -37,92 +31,181 @@ var foodopt = [{
 }];
 
 
-
-
+var casual; 
+var torso;
+var feet;
+var legs;
+var neck;
 var clothopt = [{
-  id : 13,
   type : 'Casual',
+  color : 'White',
+  length : 'Short',
+  item : 'Node.js Shirt',
+  loc: torso
+},{
+  // 0
+   type : 'Casual',
   color : ' Beige',
   length : 'Short',
-  item : 'Cargo Shorts'
+  item : 'Cargo Shorts',
+  loc : legs
 }, {
-  id : 0,
+  // 1
   type : 'Casual',
   color : 'Black',
   length : 'Long',
-  item : 'Tank-top'  
+  item : 'Ironic T-shirt',
+  loc : 'torso'  
 }, {
-  id : 1,
+  // 2
   type : 'Casual',
   color: 'Grey',
   length: 'Long',
-  item : 'Sweatpants'
+  item : 'Sweatpants',
+  loc : 'legs'
 }, {
-  id : 2,
+  // 3
   type : 'Casual',
   color : 'White',
   length : null,
-  item : 'Sneakers'
+  item : 'Sneakers',
+  loc : 'feet'
 }, {
-  id : 3,
+  // 4
   type : 'Casual',
   color : 'Black',
   length : 'Short',
-  item : 'Pants'
+  item : 'Jeans',
+  loc : 'legs'
 }, {
-  id : 4,
+  // 5
   type : 'Casual',
   color : 'Black',
   length : null,
-  item : 'Slippers'
+  item : 'Slippers',
+  loc : 'feet'
 }, {
-  id : 5, 
-  type : 'Business', 
+  type : 'Business',
+  color : 'Grey',
+  length : 'Long',
+  item : 'Slacks',
+  loc : 'legs'
+},{
+  // 6
+   type : 'Business', 
   color : 'Blue',
   length : 'Long',
-  item : 'Dress-Shirt'
+  item : 'Dress-Shirt',
+  loc : 'torso'
 }, {
-  id : 6,
+  // 7
   type : 'Business',
   color: 'Black',
   length : 'Long',
-  item : 'Slacks'
+  item : 'Slacks',
+  loc : 'legs'
 }, {
-  id :12,
+  // 8
   type : 'Business',
   color : 'Black',
   length : null,
-  item : null,
-  accessory : 'Fancy NeckTie'
+  item : 'Tie',
+  accessory : 'Fancy NeckTie',
+  loc : 'neck'
 },{
-  id : 7,
+  type : 'Business',
+  color : 'Brown',
+  length : null,
+  item : 'Dress-Shoes',
+  loc : 'feet'
+},{
+  // 9
   type : 'Business',
   color: 'Black',
   length : null,
-  item : 'Dress-Shoes' 
+  item : 'Dress-Shoes',
+  loc : 'feet' 
 }, {
-  id : 8,
+  // 10
   type : 'Hot Date',
   color: 'Pink',
   length : 'Long',
-  item : 'Dress-Shirt'
+  item : 'Dress-Shirt',
+  loc : 'torso'
 }, {
-  id : 9, 
-  type : 'Hot Date',
+  // 11
+   type : 'Hot Date',
   color : 'Black',
   length : 'Long',
-  item : 'Slacks'
+  item : 'Slacks',
+  loc : 'legs'
 }, { 
+  // 12
   id :10,
   type : 'Hot Date',
   color : 'Black',
   length : null,
-  item : 'Dress-Shoes'
+  item : 'Dress-Shoes',
+  loc : 'feet'
 }, {
+  // 13
   id: 11,
   type : 'Hot Date',
   color : 'White',
   length : null,
-  item : null,
-  accessory : 'Fancy NeckTie'
+  item : 'Tie',
+  accessory : 'Fancy NeckTie',
+  loc : 'neck'
 }];
+
+
+// var neck_items = [clothopt[11],clothopt[8]];
+// var tops = [clothopt[1], clothopt[6],clothopt[10]];
+// var legs = [clothopt[0],clothopt[2],clothopt[4],clothopt[7],clothopt[11]];
+// var feet = [clothopt[3],clothopt[5],clothopt[9],clothopt[12]];
+// console.log(tops);
+// var userchoice;
+// var casual;
+// var business;
+// var hotdate;
+// var clong;
+// var cshort;
+// if (userchoice == casual ){
+//   if (userchoice == clong){
+//     return tops[];
+//   }
+// }
+
+var casual_items = [];
+for (var i = 0; i <= 6; i++){
+  casual_items.push(clothopt[i].color + ' ' +  clothopt[i].item);
+}
+
+var shortCasual = [];
+shortCasual.push(casual_items[0],casual_items[1],casual_items[2],casual_items[6]);
+
+var longCasual = [];
+longCasual.push(casual_items[0], casual_items[1],casual_items[2],casual_items[3],casual_items[4],casual_items[5]);
+
+var business_items = [];
+  for (var i = 7; i <=12; i++){
+    business_items.push(clothopt[i].color + ' ' + clothopt[i].item);
+  }
+  console.log(business_items);
+
+
+var longBusiness = [];
+
+
+
+var hot_date = [];
+  for (var i = 13; i <= 16; i++){
+    hot_date.push(clothopt[i].color + ' ' + clothopt[i].item);
+  }
+
+// var casualCloth = 'Casual'
+// if (userChoice == casualCloth){
+//   if (userChoice == 'Long'){
+
+//   }
+// }
