@@ -54,19 +54,23 @@ angular.module('ionicApp.controllers', [])
     $ionicSlideBoxDelegate.previous();
   };
 
-  $scope.showBonus = function() {
-    var index = _.findIndex($scope.data.slides, { template : 'bonusSlide.html' });
-    $scope.data.slides[index].viewable = true;
-    countSlides();
-    $scope.data.initialInstruction = false
-    $scope.data.secondInstruction = true;
+  // $scope.showBonus = function() {
+  //   var index = _.findIndex($scope.data.slides, { template : 'bonusSlide.html' });
+  //   $scope.data.slides[index].viewable = true;
+  //   countSlides();
+  //   $scope.data.initialInstruction = false
+  //   $scope.data.secondInstruction = true;
 
-    $ionicSlideBoxDelegate.update();
-  };
+  //   $ionicSlideBoxDelegate.update();
+  // };
 
   $scope.disableSwipe = function() {
     // $ionicSlideBoxDelegate.enableSlide(false);
   };
+
+  $scope.startOver = function () {
+    $ionicSlideBoxDelegate.slide(0);
+  }
 
   // Called each time the slide changes
   $scope.slideHasChanged = function(index) { // The index that it changed to
@@ -75,21 +79,21 @@ angular.module('ionicApp.controllers', [])
     $scope.data.slideIndex = index;
   };
 
-  // User makes the choice on the RIGHT of the screen
+  // User makes the choice on the LEFT of the screen
   $scope.onSwipeLeft = function() { // wear
     var currentIndex = $ionicSlideBoxDelegate.currentIndex();
-    console.log('RIGHT choice');
-    console.log('RIGHT index = ' + currentIndex);
+    // console.log('LEFT choice');
+    // console.log('LEFT index = ' + currentIndex);
     if (currentIndex === 0) {
       $ionicSlideBoxDelegate.slide(1);
     }
   };
 
-  // User makes the choice on the LEFT of the screen
+  // User makes the choice on the RIGHT of the screen
   $scope.onSwipeRight = function() {
     var currentIndex = $ionicSlideBoxDelegate.currentIndex();
-    console.log('LEFT choice');
-    console.log('LEFT index = ' + currentIndex);
+    console.log('RIGHT choice');
+    console.log('RIGHT index = ' + currentIndex);
     if (currentIndex === 1) { // User chose Business
       $ionicSlideBoxDelegate.slide(2);
     }
