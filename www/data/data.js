@@ -169,6 +169,7 @@ var userChoice = {
   acessory : null
 };
 
+
 // Filter through everything to return casual
 
 
