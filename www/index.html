@@ -49,7 +49,7 @@
       <ion-view title="Dynamic Slides">
         <ion-slide-box ng-init="disableSwipe()">
 
-          <ion-slide ng-repeat="slide in data.slides | filter:{viewable : true}" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+          <ion-slide ng-repeat="slide in data.slides" on-swipe-left="advanceSlide()" on-swipe-right="advanceSlide()">
             <div ng-include src="slide.template"></div>
           </ion-slide>
 

@@ -79,28 +79,29 @@ angular.module('ionicApp.controllers', [])
     $scope.data.slideIndex = index;
   };
 
-  // User makes the choice on the LEFT of the screen
-  $scope.onSwipeLeft = function() { // wear
-    var currentIndex = $ionicSlideBoxDelegate.currentIndex();
-    // console.log('LEFT choice');
-    // console.log('LEFT index = ' + currentIndex);
-    if (currentIndex === 0) {
-      $ionicSlideBoxDelegate.slide(1);
-    }
-  };
+  // // User makes the choice on the LEFT of the screen
+  // $scope.onSwipeLeft = function() { // wear
+  //   var currentIndex = $ionicSlideBoxDelegate.currentIndex();
+  //   // console.log('LEFT choice');
+  //   // console.log('LEFT index = ' + currentIndex);
+  //   if (currentIndex === 0) {
+  //     $ionicSlideBoxDelegate.slide(1);
+  //   }
+  // };
 
   // User makes the choice on the RIGHT of the screen
-  $scope.onSwipeRight = function() {
+  $scope.advanceSlide = function() {
     var currentIndex = $ionicSlideBoxDelegate.currentIndex();
-    console.log('RIGHT choice');
-    console.log('RIGHT index = ' + currentIndex);
-    if (currentIndex === 1) { // User chose Business
+    // console.log('RIGHT choice');
+    // console.log('RIGHT index = ' + currentIndex);
+    if (currentIndex === 0) {
+      $ionicSlideBoxDelegate.slide(1);
+    } 
+     if (currentIndex === 1) { // User chose Business
       $ionicSlideBoxDelegate.slide(2);
-    }
-    else if (currentIndex === 2) { // User chose Black
+    } else if (currentIndex === 2) { // User chose Black
       $ionicSlideBoxDelegate.slide(3);
-    }
-    else if (currentIndex === 3) { // User chose Long
+    } else if (currentIndex === 3) { // User chose Long
       $ionicSlideBoxDelegate.slide(4);
     }
   };
