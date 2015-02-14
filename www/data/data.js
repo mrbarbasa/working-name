@@ -1,3 +1,5 @@
+exports.datas = choose;
+
 // var foodopt = [{
 //   cuisine : 'Mexican',
 //   location : 'Kakaako',
@@ -42,14 +44,14 @@ var clothopt = [{
   color : 'White',
   length : 'Short',
   item : 'Node.js Shirt',
-  loc: torso
+  loc: 'torso'
 },{
   // 0
    type : 'Casual',
-  color : ' Beige',
+  color : 'Beige',
   length : 'Short',
   item : 'Cargo Shorts',
-  loc : legs
+  loc : 'legs'
 }, {
   // 1
   type : 'Casual',
@@ -171,18 +173,61 @@ var userChoice = {
 
 
 // Filter through Casual to return Short items.
+var bodyParts = {
+  head : false,
+  torso : false,
+  feet : false
+};
 
+// xported function
 function choose(userChoice){
+ // filter function 1
   function getAnswer(e){
-    if (userChoice.type == e.type && userChoice.length == e.length){
+    if (userChoice.type == e.type){
       return e;
     }else{
       return false;
     }
   }
-  clotopt.filter(getAnswer);
-}
+  var newOpt = clothopt.filter(getAnswer);
+  // pull each loc of item and store it to respective array
+  var torso = [];
+  var legs = [];
+  var feet = [];
+  // must return bool on filter
+  function getLoc(e){
+    if (e.loc == 'torso'){
+      torso.push(e);
+      return true;
+    }
+    if (e.loc == 'legs'){
+      legs.push(e);
+      return true;
+    }
+    if (e.loc == 'feet'){
+      feet.push(e);
+      return true;
+    }
+    return;
+  }
+  newOpt = newOpt.filter(getLoc);
+  console.log(newOpt);
+  var answerObj ={};
+  function finalAnswer(answerObj){
+    var torsoNum = Math.floor(Math.random()*torso.length);
+    var legsNum = Math.floor(Math.random()*legs.length);
+    var feetNum = Math.floor(Math.random()*feet.length);
 
+    answerObj = {
+      // check if answerObj.torso = false; then push if not don't
+      torso : torso[torsoNum], 
+      legs : legs[legsNum],
+      feet : feet[feetNum] 
+    };
+    return answerObj;
+  }
+  return finalAnswer(answerObj);
+}
 
 
 
