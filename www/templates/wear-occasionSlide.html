@@ -1,6 +1,37 @@
-<h1 class="title">What should I wear?</h1>
+<div class="wear-container">
+  <ion-slide-box delegate-handle="top-box" show-pager="false" does-continue="true" auto-play="true" slide-interval="100" on-tap="onTap()">
+    <ion-slide class="top-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/cats/">
+    </ion-slide>
+    <ion-slide class="top-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/food/">
+    </ion-slide>
+    <ion-slide class="top-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/nature/">
+    </ion-slide>
+  </ion-slide-box>
 
-<h4 class="left-choice">LEFT: Business</h4>
-<h4 class="right-choice">RIGHT: Hot Date</h4>
+  <ion-slide-box delegate-handle="bottom-box" show-pager="false" does-continue="true" auto-play="true" slide-interval="1" on-tap="onTap()">
+    <ion-slide class="bottom-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/cats/">
+    </ion-slide>
+    <ion-slide class="bottom-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/food/">
+    </ion-slide>
+    <ion-slide class="bottom-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/nature/">
+    </ion-slide>
+  </ion-slide-box>
 
-<div class="start-over" ng-include="'./templates/partials/_home_button.html'"></div>
+  <ion-slide-box delegate-handle="footwear-box" show-pager="false" does-continue="true" auto-play="true" slide-interval="50" on-tap="onTap()">
+    <ion-slide class="footwear-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/cats/">
+    </ion-slide>
+    <ion-slide class="footwear-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/food/">
+    </ion-slide>
+    <ion-slide class="footwear-slide" on-tap="onTap()">
+      <img src="http://lorempixel.com/128/128/nature/">
+    </ion-slide>
+  </ion-slide-box>
+</div>

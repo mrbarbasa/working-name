@@ -106,4 +106,16 @@ angular.module('ionicApp.controllers', [])
     }
   };
 
+  $scope.onTap = function() {
+    console.log('hello');
+    // console.log($ionicSlideBoxDelegate);
+    // console.log($ionicSlideBoxDelegate.$getByHandle('bottom-box'));
+    $ionicSlideBoxDelegate.$getByHandle('top-box').stop();
+    $ionicSlideBoxDelegate.$getByHandle('bottom-box').stop();
+    $ionicSlideBoxDelegate.$getByHandle('footwear-box').stop();
+    // $ionicSlideBoxDelegate.$getByHandle('top-box').enableSlide(false);
+    // $ionicSlideBoxDelegate.$getByHandle('bottom-box').enableSlide(false);
+    // $ionicSlideBoxDelegate.$getByHandle('footwear-box').enableSlide(false);
+  };
+
 });

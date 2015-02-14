@@ -21,6 +21,57 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+ion-slide.slider-slide {
+  background-color: yellow;
+  border-bottom: 1px solid black;
+  &.hello {
+    background-color: #EAEAEA;
+  }
+  &.top-slide {
+    background-color: pink;
+  }
+  &.bottom-slide {
+    background-color: lightblue;
+  }
+  &.footwear-slide {
+    background-color: tan;
+  }
+}
+
+.test {
+  background-color: yellow;
+}
+
+.wear-container {
+  // background-color: tan;
+  .box {
+    background-color: tan;
+  }
+}
+
+.roulette-wrap {
+  background-color: pink;
+  // z-index: ;
+  margin: 0 auto;
+  // width: 500px;
+  // position: relative;
+  overflow: hidden;
+  height: 128px;
+}
+
+.roulette {
+  position: relative;
+  top: 0;
+  // transform: translate(0px, -128px);
+  // background-color: yellow;
+  // margin: 0 auto;
+  // height: 128px;
+  // width: 128px;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+}
+
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
 }

@@ -7015,6 +7015,34 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+ion-slide.slider-slide {
+  background-color: yellow;
+  border-bottom: 1px solid black; }
+  ion-slide.slider-slide.hello {
+    background-color: #EAEAEA; }
+  ion-slide.slider-slide.top-slide {
+    background-color: pink; }
+  ion-slide.slider-slide.bottom-slide {
+    background-color: lightblue; }
+  ion-slide.slider-slide.footwear-slide {
+    background-color: tan; }
+
+.test {
+  background-color: yellow; }
+
+.wear-container .box {
+  background-color: tan; }
+
+.roulette-wrap {
+  background-color: pink;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 128px; }
+
+.roulette {
+  position: relative;
+  top: 0; }
+
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto; }
 
