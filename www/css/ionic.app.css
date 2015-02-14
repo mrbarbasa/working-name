@@ -7028,31 +7028,31 @@ body {
     .slider .slider-slides .title {
       margin: 0;
       font-family: 'Oswald', sans-serif; }
-    .slider .slider-slides .left-choice {
+    .slider .slider-slides .left-side {
       position: absolute;
-      font-family: 'Oswald', sans-serif;
-      font-size: 2em;
-      background-image: url('../img/business-male.jpg');
-      background-repeat: no-repeat;
+      background: url('../img/business-male.jpg') no-repeat 80%;
       background-size: cover;
-      background-position: 80%;
       width: 50%;
       height: 100%;
       margin: 0;
-      padding: 100px 0px 0px 100px; }
-    .slider .slider-slides .right-choice {
+      padding: 100px 30px 0px 100px; }
+      .slider .slider-slides .left-side .left-choice {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2em;
+        text-align: right; }
+    .slider .slider-slides .right-side {
       position: absolute;
-      font-family: 'Oswald', sans-serif;
-      font-size: 2em;
-      background-image: url('../img/casual-male.jpg');
-      background-repeat: no-repeat;
+      background: url('../img/casual-male.jpg') no-repeat 20%;
       background-size: cover;
-      background-position: 20%;
       left: 50%;
       width: 50%;
       height: 100%;
       margin: 0;
-      padding: 100px 100px 0px 0px; }
+      padding: 100px 100px 0px 30px; }
+      .slider .slider-slides .right-side .right-choice {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2em;
+        text-align: left; }
     .slider .slider-slides .start-over {
       background-color: green;
       margin: 0; }
