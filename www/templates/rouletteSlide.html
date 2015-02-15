@@ -12,7 +12,7 @@
   </ion-slide-box>
 
   <ion-slide-box delegate-handle="bottom-box" show-pager="false" does-continue="true">
-    <ion-slide class="top-slide">
+    <ion-slide class="bottom-slide">
       <img ng-src="{{data.choose(data.userChoice).legs[0].img}}">
     </ion-slide>
     <ion-slide class="top-slide">
@@ -23,21 +23,15 @@
     <ion-slide class="top-slide">
       <img ng-src="{{data.choose(data.userChoice).legs[3].img}}">
     </ion-slide>
-    <ion-slide class="top-slide">
-      <img ng-src="{{data.choose(data.userChoice).legs[4].img}}">
-    </ion-slide>
   </ion-slide-box>
 
   <ion-slide-box delegate-handle="footwear-box" show-pager="false" does-continue="true">
-    <ion-slide class="top-slide">
+    <ion-slide class="footwear-slide">
       <img ng-src="{{data.choose(data.userChoice).feet[0].img}}">
     </ion-slide>
     <ion-slide class="top-slide">
       <img ng-src="{{data.choose(data.userChoice).feet[1].img}}">
     </ion-slide>
-    <ion-slide class="top-slide">
-      <img ng-src="{{data.choose(data.userChoice).feet[2].img}}">
 </div>
-
 
 <div class="start-over" ng-include="'./templates/partials/_home_button.html'"></div>

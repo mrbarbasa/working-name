@@ -102,6 +102,13 @@ var clothopt = [{
   loc : 'torso',
   img : '../img/business-bluedressshirt.jpg'
 }, {
+   type : 'Business', 
+  color : 'Blue',
+  length : 'Long',
+  item : 'Dress Shirt',
+  loc : 'torso',
+  img : '../img/business-bluedressshirt.jpg'
+},{
   // 7
   type : 'Business',
   color: 'Black',
