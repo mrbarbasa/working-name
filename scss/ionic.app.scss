@@ -51,6 +51,9 @@ body {
         font-family: $oswald;
         font-size: 2em;
         text-align: right;
+        @media screen and (max-width: 480px) {
+          font-size: 20px;
+        }
       }
     }
     .right-side {
@@ -66,11 +69,22 @@ body {
         font-family: $oswald;
         font-size: 2em;
         text-align: left;
+        @media screen and (max-width: 480px) {
+          font-size: 20px;
+        }
       }
     }
     .start-over {
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      width: 50%;
       background-color: green;
+      color: #fff;
       margin: 0;
+      padding: 10px;
+      font-family: $oswald;
+      font-size: 20px;
     }
   }
 }
