@@ -1,6 +1,6 @@
 angular.module('ionicApp.controllers', [])
 
-.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate, DataRetrieval) {
+.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate, DataRetrieval, $timeout) {
 
   $scope.data = DataRetrieval;
 
@@ -29,6 +29,7 @@ angular.module('ionicApp.controllers', [])
   }
 
   $scope.roulette = function () {
+    console.log("TEST");
     var interval = [];
     var timeInterval = [];
     for (var i = 0; i < 3; i++) {
@@ -54,13 +55,16 @@ angular.module('ionicApp.controllers', [])
   }
 
   $scope.getRandomInterval = function () {
-    return Math.floor(Math.random()*15)+5;
+    return Math.floor(Math.random()*20)+5;
   }
 
   $scope.getRandomTimeInterval = function () {
     return Math.floor(Math.random()*100)+50;
   }
 
+  $scope.spinRoulette = function () {
+    $timeout($scope.roulette, 2000);
+  }
 
 
 });

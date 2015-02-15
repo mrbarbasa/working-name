@@ -1,41 +1,43 @@
 <div class="wear-container">
   <ion-slide-box delegate-handle="top-box" show-pager="false" does-continue="true">
     <ion-slide class="top-slide">
-      <img src="http://lorempixel.com/128/128/cats/">
+      <img ng-src="{{data.choose(data.userChoice).torso[0].img}}">
     </ion-slide>
     <ion-slide class="top-slide">
-      <img src="http://lorempixel.com/128/128/food/">
+      <img ng-src="{{data.choose(data.userChoice).torso[1].img}}">
     </ion-slide>
     <ion-slide class="top-slide">
-      <img src="http://lorempixel.com/128/128/nature/">
+      <img ng-src="{{data.choose(data.userChoice).torso[2].img}}">
     </ion-slide>
   </ion-slide-box>
 
   <ion-slide-box delegate-handle="bottom-box" show-pager="false" does-continue="true">
-    <ion-slide class="bottom-slide">
-      <img src="http://lorempixel.com/128/128/cats/">
+    <ion-slide class="top-slide">
+      <img ng-src="{{data.choose(data.userChoice).legs[0].img}}">
     </ion-slide>
-    <ion-slide class="bottom-slide">
-      <img src="http://lorempixel.com/128/128/food/">
+    <ion-slide class="top-slide">
+      <img ng-src="{{data.choose(data.userChoice).legs[1].img}}">
     </ion-slide>
-    <ion-slide class="bottom-slide">
-      <img src="http://lorempixel.com/128/128/nature/">
+    <ion-slide class="top-slide">
+      <img ng-src="{{data.choose(data.userChoice).legs[2].img}}">
+    <ion-slide class="top-slide">
+      <img ng-src="{{data.choose(data.userChoice).legs[3].img}}">
+    </ion-slide>
+    <ion-slide class="top-slide">
+      <img ng-src="{{data.choose(data.userChoice).legs[4].img}}">
     </ion-slide>
   </ion-slide-box>
 
   <ion-slide-box delegate-handle="footwear-box" show-pager="false" does-continue="true">
-    <ion-slide class="footwear-slide">
-      <img src="http://lorempixel.com/128/128/cats/">
+    <ion-slide class="top-slide">
+      <img ng-src="{{data.choose(data.userChoice).feet[0].img}}">
     </ion-slide>
-    <ion-slide class="footwear-slide">
-      <img src="http://lorempixel.com/128/128/food/">
+    <ion-slide class="top-slide">
+      <img ng-src="{{data.choose(data.userChoice).feet[1].img}}">
     </ion-slide>
-    <ion-slide class="footwear-slide">
-      <img src="http://lorempixel.com/128/128/nature/">
-    </ion-slide>
-  </ion-slide-box>
+    <ion-slide class="top-slide">
+      <img ng-src="{{data.choose(data.userChoice).feet[2].img}}">
 </div>
 
-<div class="stop_roulette" on-tap="data.choose(data.userChoice)">Stop Roullete</div>
 
 <div class="start-over" ng-include="'./templates/partials/_home_button.html'"></div>
