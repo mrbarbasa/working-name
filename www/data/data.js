@@ -99,21 +99,24 @@ var clothopt = [{
   color : 'Grey',
   length : 'Long',
   item : 'Slacks',
-  loc : 'legs'
+  loc : 'legs',
+  img :'../img/business-greyslack'
 },{
   // 6
    type : 'Business', 
   color : 'Blue',
   length : 'Long',
   item : 'Dress-Shirt',
-  loc : 'torso'
+  loc : 'torso',
+  img : '../img/business-bluedressshirt'
 }, {
   // 7
   type : 'Business',
   color: 'Black',
   length : 'Long',
   item : 'Slacks',
-  loc : 'legs'
+  loc : 'legs',
+  img : '../img/business-blackslack'
 }, {
   // 8
   type : 'Business',
@@ -127,14 +130,16 @@ var clothopt = [{
   color : 'Brown',
   length : null,
   item : 'Dress-Shoes',
-  loc : 'feet'
+  loc : 'feet',
+  img : '../img/business-brownshoe'
 },{
   // 9
   type : 'Business',
   color: 'Black',
   length : null,
   item : 'Dress-Shoes',
-  loc : 'feet' 
+  loc : 'feet',
+  img : '../img/business-blackshoe'
 }, {
   // 10
   type : 'Hot Date',
