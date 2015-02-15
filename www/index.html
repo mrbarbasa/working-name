@@ -42,7 +42,8 @@
             <div ng-include src="slides[1].template"></div>
           </ion-slide>
 
-          <ion-slide on-swipe-left="data.userChoice.type='Casual'" on-swipe-right="data.userChoice.type='Business'">
+          <ion-slide on-swipe-left="data.userChoice.type='Casual'; roulette()" on-swipe-right="data.userChoice.type='Business'; roulette()">
+
             <div ng-include src="slides[0].template"></div>
           </ion-slide>
 
