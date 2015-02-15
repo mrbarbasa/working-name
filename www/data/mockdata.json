@@ -1,2 +1,0 @@
-var choose = require('./data').datas
-choose({type:'Casual'})
