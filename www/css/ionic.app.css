@@ -7063,7 +7063,8 @@ body {
       height: 200px; }
       .slider .slider-slides .wear-container img {
         width: 200px;
-        height: 200px; }
+        height: 200px;
+        margin: 1px; }
     .slider .slider-slides .start-over {
       display: block;
       position: absolute;
