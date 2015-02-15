@@ -12,7 +12,7 @@ angular.module('ionicApp.services',[])
 
   var colors = ['black', 'gray', 'white'];
 
-  var casual; 
+  var casual;
   var torso;
   var feet;
   var legs;
@@ -53,7 +53,7 @@ var clothopt = [{
   length : 'Long',
   item : 'Ironic T-shirt',
   loc : 'legs',
-  img :'../img/casual-sweats.jpg'  
+  img :'../img/casual-sweats.jpg'
 }, {
   // 2
   type : 'Casual',
@@ -62,6 +62,14 @@ var clothopt = [{
   item : 'Sweatpants',
   loc : 'legs',
   img :'../img/casual-greysweat.jpg'
+}, {
+  // 3
+  type : 'Casual',
+  color : 'White',
+  length : null,
+  item : 'Sneakers',
+  loc : 'feet',
+  img : '../img/casual-whiteshoes.jpg'
 }, {
   // 3
   type : 'Casual',
@@ -87,6 +95,14 @@ var clothopt = [{
   loc : 'feet',
   img :'../img/casual-slipper.jpg'
 }, {
+  // 5
+  type : 'Casual',
+  color : 'Black',
+  length : null,
+  item : 'Slippers',
+  loc : 'feet',
+  img :'../img/casual-slipper.jpg'
+}, {
   type : 'Business',
   color : 'Grey',
   length : 'Long',
@@ -95,20 +111,44 @@ var clothopt = [{
   img :'../img/business-greyslack.jpg'
 },{
   // 6
-   type : 'Business', 
+   type : 'Business',
   color : 'Blue',
   length : 'Long',
   item : 'Dress-Shirt',
   loc : 'torso',
   img : '../img/business-bluedressshirt.jpg'
 }, {
-   type : 'Business', 
+  // 6
+   type : 'Business',
+  color : 'Blue',
+  length : 'Long',
+  item : 'Dress-Shirt',
+  loc : 'torso',
+  img : '../img/business-bluedressshirt.jpg'
+}, {
+   type : 'Business',
   color : 'Blue',
   length : 'Long',
   item : 'Dress Shirt',
   loc : 'torso',
   img : '../img/business-bluedressshirt.jpg'
 },{
+  // 7
+  type : 'Business',
+  color: 'Black',
+  length : 'Long',
+  item : 'Slacks',
+  loc : 'legs',
+  img : '../img/business-blackslack.jpg'
+}, {
+  // 7
+  type : 'Business',
+  color: 'Black',
+  length : 'Long',
+  item : 'Slacks',
+  loc : 'legs',
+  img : '../img/business-blackslack.jpg'
+}, {
   // 7
   type : 'Business',
   color: 'Black',
@@ -124,6 +164,20 @@ var clothopt = [{
   item : 'Tie',
   accessory : 'Fancy NeckTie',
   loc : 'neck'
+},{
+  type : 'Business',
+  color : 'Brown',
+  length : null,
+  item : 'Dress-Shoes',
+  loc : 'feet',
+  img : '../img/business-brownshoe.jpg'
+},{
+  type : 'Business',
+  color : 'Brown',
+  length : null,
+  item : 'Dress-Shoes',
+  loc : 'feet',
+  img : '../img/business-brownshoe.jpg'
 },{
   type : 'Business',
   color : 'Brown',
@@ -153,7 +207,7 @@ var clothopt = [{
   length : 'Long',
   item : 'Slacks',
   loc : 'legs'
-}, { 
+}, {
   // 12
   id :10,
   type : 'Hot Date',
@@ -233,9 +287,9 @@ var clothopt = [{
 
       answerObj = {
         // check if answerObj.torso = false; then push if not don't
-        torso : torso, 
+        torso : torso,
         legs : legs,
-        feet : feet 
+        feet : feet
       };
       console.log(answerObj);
       return answerObj;
