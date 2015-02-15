@@ -44,49 +44,56 @@ var clothopt = [{
   color : 'White',
   length : 'Short',
   item : 'Node.js Shirt',
-  loc: 'torso'
+  loc: 'torso',
+  img : '../img/nodeshirt.jpg'
 },{
   // 0
    type : 'Casual',
   color : 'Beige',
   length : 'Short',
   item : 'Cargo Shorts',
-  loc : 'legs'
+  loc : 'legs',
+  img : '../img/casual-pants.jpg'
 }, {
   // 1
   type : 'Casual',
   color : 'Black',
   length : 'Long',
   item : 'Ironic T-shirt',
-  loc : 'torso'  
+  loc : 'torso',
+  img :'../img/casual-sweats.jpg'  
 }, {
   // 2
   type : 'Casual',
   color: 'Grey',
   length: 'Long',
   item : 'Sweatpants',
-  loc : 'legs'
+  loc : 'legs',
+  img :'../img/casual-greysweat.jpg'
 }, {
   // 3
   type : 'Casual',
   color : 'White',
   length : null,
   item : 'Sneakers',
-  loc : 'feet'
+  loc : 'feet',
+  img : '../img/casual-whiteshoes.jpg'
 }, {
   // 4
   type : 'Casual',
   color : 'Black',
   length : 'Short',
   item : 'Jeans',
-  loc : 'legs'
+  loc : 'legs',
+  img : '../img/casual-blackshort.jpg'
 }, {
   // 5
   type : 'Casual',
   color : 'Black',
   length : null,
   item : 'Slippers',
-  loc : 'feet'
+  loc : 'feet',
+  img :'../img/casual-slipper.jpg'
 }, {
   type : 'Business',
   color : 'Grey',
